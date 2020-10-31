@@ -1,0 +1,23 @@
+body {
+  max-height: 1vh;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25%;
+}
+
+.button {
+  border: 1px solid rgb(214, 255, 224);
+  background-color: rgba(200, 202, 179, 0.938);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: aqua;
+}
+
+.button-text {
+  font-family: fantasy;
+  font-weight: 400;
+  color: rgb(29, 20, 3);
+}

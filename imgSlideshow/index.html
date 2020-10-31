@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+
+</head>
+
+<body>
+    <img class="slides" width="100%" height="100%" style="object-fit:contain">
+    <script>
+        let slides = document.querySelector(".slides");//Select the image by class.
+        const IMAGES = ["img1.png", "img2.png", "img3.png", "img4.png", "img5.png"];//Array of images.
+        let time = 4000;//Time before next slide.
+        let index = 0;// The in dex to be increased for a certain condition.
+        function chgImg() {
+            slides.setAttribute('src', `${IMAGES[index]}`);// SET source code attribute of the <img> tag to the  IMAGES[index].
+            document.body.style.backgroundColor = "yellow";// SET background color.
+            slides.style.transition = "all ease-in 2s";
+            if (index < IMAGES.length - 1) {// As long as the index is lesser than the length of the IMAGES[4].
+                index++;// Increase the index by one.
+            } else {
+                index = 0; // Else set it to the first image i n the array.
+            };
+            setTimeout(chgImg, time);// Time between image change.
+        };
+        window.onload = chgImg;// Function called on document load.
+    </script>
+</body>
+
+</html>
